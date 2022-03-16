@@ -20,9 +20,9 @@ function display(){
           const wordsIndex = splitWords[i]
 
         if(wordsIndex.length >= 5){
-          wordsDisplay += `<mark style ="color:pink;">${wordsIndex}</mark>`
+          wordsDisplay += `<mark style ="color:CDFFF9;">${wordsIndex}</mark>`
         } else{
-                 wordsDisplay += wordsIndex + " "
+                 wordsDisplay += wordsIndex + " "+ " "
         } 
 }
 
