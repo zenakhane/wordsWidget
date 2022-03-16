@@ -6,6 +6,9 @@ const addBtnElem = document.querySelector('.btn');
 // display element
 const wordElem = document.querySelector('.words1');
 
+// counter element
+const counterElem = document.querySelector('.counter')
+
 
 
 
@@ -24,6 +27,7 @@ function display(){
 }
 
         wordElem.innerHTML = wordsDisplay
+        counterElem.innerHTML = splitWords.length
 
 }
 

@@ -38,3 +38,12 @@ body{
    font-size: px;
    
    }
+
+   .words1{
+       font-size: 20 ;
+       padding: 20px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   .counter{
+       font-size: 30px;
+   }
