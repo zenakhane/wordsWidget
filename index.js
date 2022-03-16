@@ -1,19 +1,30 @@
 
 // input element
-let sentence = document.querySelector(".sentence");
+const sentence = document.querySelector('.sentence');
 // button element
-let AddBtnElem = document.querySelector(".btn");
-// let errors = document.querySelector(".error");
+const addBtnElem = document.querySelector('.btn');
 // display element
-let wordElem = document.querySelector(".words1");
+const wordElem = document.querySelector('.words1');
 
 
-function display (){
-        //  sentence.innerHtml = ''
-        if(sentence != ''){
-                let words =  sentence.value 
-            console.log(words)
-        }   
+
+
+function display(){
+        const words = sentence.value;
+        const splitWords = words.split(" ");
+        let wordsDisplay = '';
+        for(var i = 0; i < splitWords.length; i++ ){
+          const wordsIndex = splitWords[i]
+
+        if(wordsIndex.length >= 5){
+          wordsDisplay += `<mark style ="color:pink;">${wordsIndex}</mark>`
+        } else{
+                 wordsDisplay += wordsIndex + " "
+        } 
+}
+
+        wordElem.innerHTML = wordsDisplay
 
 }
-AddBtnElem.addEventListener('click', display)
+
+addBtnElem.addEventListener('click',display)

@@ -1,4 +1,4 @@
-function wordsFun(){
+function WordsFun(){
 
     let characters = [];
     let charactersNow;
@@ -9,8 +9,9 @@ function wordsFun(){
                 if(!characters.includes(char)){
                     charactersNow++
                    characters.push(char)
-                   return true
+                   
                 }
+                return characters
         }
     
         // function to get the words
