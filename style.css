@@ -1,6 +1,6 @@
 body{
     text-align: center; 
-    /* background-color: rgb(154, 160, 220);  */
+    background-color: rgb(195, 240, 245); 
 }
     
     h1{
@@ -8,6 +8,8 @@ body{
        font-size: 50px;
        color: rgb(55, 131, 98);
        text-shadow:rgb(189, 243, 220);
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
    }
    
    .btn{
@@ -21,11 +23,16 @@ body{
        padding: 5px 10px 5px 10px;
        -webkit-transition: width 0.4s ease-in-out;
        transition: width 0.4s ease-in-out;
+
    }
    .btn:active {
        box-shadow: 0 #666;
        transform: translateY(5px);
    }
+   .btn:hover {
+    background-color: rgb(55, 131, 98);; 
+    color: white;
+}
    .btn input[type=button]:focus {
        width: 100%;
    }
@@ -40,6 +47,7 @@ body{
      border-radius: 4px;
      box-sizing: border-box;
      box-shadow: 5px;
+     
    
    }
    

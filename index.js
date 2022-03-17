@@ -41,7 +41,6 @@ const checkButton = () => {
   for (let i = 0; i < splitWords.length; i++) {
     const element = splitWords[i];
     if (element.length >= 5) {
-      checkBtn.style.display = 'none';
       wordsDisplay += `<mark style ="background-color:CDFFF9;">${element}</mark> `
     }
     else {
@@ -49,7 +48,6 @@ const checkButton = () => {
       console.log(checkBtn.checked)
     }
       wordElem.innerHTML = wordsDisplay
-
   }
 }
 element.addEventListener('click', checkButton)
