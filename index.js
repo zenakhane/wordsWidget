@@ -26,14 +26,16 @@ function display(){
                  wordsDisplay += wordsIndex + ' '
         } 
 }
+checkButton()
         wordElem.innerHTML = wordsDisplay
         counterElem.innerHTML = splitWords.length
 }
-
-
-
-// function checkButton(){
-//   const checkBtn = document.querySelector("input[name='wordie']:checked");
-// }
-// checkWords.addEventListener('click',checkButton)
 addBtnElem.addEventListener('click',display)
+
+
+function checkButton(){
+  const checkBtn = document.querySelector("input[name='wordie']:checked");
+  checkBtn.checked = false;
+  console.log('charac')
+}
+checkWords.addEventListener('click',checkButton)
