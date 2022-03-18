@@ -33,21 +33,26 @@ addBtnElem.addEventListener('click', displayWords)
 
 
 const checkButton = () => {
-  const checkBtn = document.querySelector("input[name='wordie']:checked");
+  const checkBtn = document.querySelector('.charac') //("input[name='wordie']:checked");
   const words = sentence.value;
   const splitWords = words.split(" ");
   let wordsDisplay = '';
-
+  
   for (let i = 0; i < splitWords.length; i++) {
     const element = splitWords[i];
     if (element.length >= 8) {
       wordsDisplay += `<mark style ="background-color:CDFFF9;">${element}</mark> `
     }
-    else {
-      checkBtn.checked = false;
-    }
+    // else {
+      if(!checkBtn.checked){
+        wordsDisplay += element + ' '
+      }
+    //   // checkBtn.checked = false;
+    // }
     wordElem.innerHTML = wordsDisplay
-  }
+  
+ }
+
 }
-element.addEventListener('change',checkButton)
+element.addEventListener('click',checkButton)
 
