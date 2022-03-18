@@ -12,7 +12,7 @@ const element = document.querySelector('.charac');
 
 
 
-const display = () => {
+const displayWords = () => {
   const checkBtn = document.querySelector("input[name='wordie']:checked");
   const words = sentence.value;
   const splitWords = words.split(" ");
@@ -29,7 +29,7 @@ const display = () => {
   wordElem.innerHTML = wordsDisplay
   counterElem.innerHTML = splitWords.length
 }
-addBtnElem.addEventListener('click', display)
+addBtnElem.addEventListener('click', displayWords)
 
 
 const checkButton = () => {
@@ -40,14 +40,14 @@ const checkButton = () => {
 
   for (let i = 0; i < splitWords.length; i++) {
     const element = splitWords[i];
-    if (element.length >= 5) {
+    if (element.length >= 8) {
       wordsDisplay += `<mark style ="background-color:CDFFF9;">${element}</mark> `
     }
     else {
       checkBtn.checked = false;
-      console.log(checkBtn.checked)
     }
-      wordElem.innerHTML = wordsDisplay
+    wordElem.innerHTML = wordsDisplay
   }
 }
-element.addEventListener('click', checkButton)
+element.addEventListener('change',checkButton)
+
