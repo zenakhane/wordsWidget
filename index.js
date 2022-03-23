@@ -21,7 +21,7 @@ const displayWords = () => {
     const wordsIndex = splitWords[i]
 
     if (wordsIndex.length >= 5) {
-      wordsDisplay += `<mark style ="background-color:CDFFF9;">${wordsIndex}</mark> `
+      wordsDisplay += `<mark style ="background-color: purple;">${wordsIndex}</mark> `
     } else {
       wordsDisplay += wordsIndex + ' '
     }
@@ -32,8 +32,21 @@ const displayWords = () => {
 addBtnElem.addEventListener('click', displayWords)
 
 
+// const longWords = () => {
+// let wordsDisplay = '';
+//   for (var i = 0; i < splitWords.length; i++) {
+//     const wordsIndex = splitWords[i]
+//      if (element.length > longWord.length) {
+  
+//       longWord = element
+    
+//       longWord += `<mark style ="background-color:pink;">${element}</mark> `
+//     }
+//   }
+// }
+
 const checkButton = () => {
-  const checkBtn = document.querySelector('.charac') //("input[name='wordie']:checked");
+  const checkBtn = document.querySelector('.charac') ;
   const words = sentence.value;
   const splitWords = words.split(" ");
   let wordsDisplay = '';
@@ -41,14 +54,11 @@ const checkButton = () => {
   for (let i = 0; i < splitWords.length; i++) {
     const element = splitWords[i];
     if (element.length >= 8) {
-      wordsDisplay += `<mark style ="background-color:CDFFF9;">${element}</mark> `
+      wordsDisplay += `<mark style ="background-color: ;">${element}</mark> `
     }
-    // else {
       if(!checkBtn.checked){
         wordsDisplay += element + ' '
       }
-    //   // checkBtn.checked = false;
-    // }
     wordElem.innerHTML = wordsDisplay
   
  }
@@ -56,3 +66,5 @@ const checkButton = () => {
 }
 element.addEventListener('click',checkButton)
 
+
+  
