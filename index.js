@@ -54,7 +54,7 @@ const checkButton = () => {
   for (let i = 0; i < splitWords.length; i++) {
     const element = splitWords[i];
     if (element.length >= 8) {
-      wordsDisplay += `<mark style ="background-color: ;">${element}</mark> `
+      wordsDisplay += `<mark style ="background-color:pink ;">${element}</mark> `
     }
       if(!checkBtn.checked){
         wordsDisplay += element + ' '
