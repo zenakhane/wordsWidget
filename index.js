@@ -1,4 +1,5 @@
 // input element
+
 const sentence = document.querySelector('.sentence');
 // button element
 const addBtnElem = document.querySelector('.btn');
@@ -17,54 +18,59 @@ const displayWords = () => {
   const words = sentence.value;
   const splitWords = words.split(" ");
   let wordsDisplay = '';
+  const longestWordOfThemAll = longerSent(words);
   for (var i = 0; i < splitWords.length; i++) {
     const wordsIndex = splitWords[i]
 
-    if (wordsIndex.length >= 5) {
-      wordsDisplay += `<mark style ="background-color: purple;">${wordsIndex}</mark> `
+    if (wordsIndex.length >= 4) {
+      if (longestWordOfThemAll.length == wordsIndex.length) {
+        wordsDisplay += `<mark style ="background-color:green;">${wordsIndex}</mark> `
+
+      } else {
+        wordsDisplay += `<mark style ="background-color:purple;">${wordsIndex}</mark> `
+      }
     } else {
       wordsDisplay += wordsIndex + ' '
     }
   }
   wordElem.innerHTML = wordsDisplay
-  counterElem.innerHTML = splitWords.length
+  counterElem.innerHTML = 'There are ' + splitWords.length + ' words in this sentence'
 }
 addBtnElem.addEventListener('click', displayWords)
 
 
-// const longWords = () => {
-// let wordsDisplay = '';
-//   for (var i = 0; i < splitWords.length; i++) {
-//     const wordsIndex = splitWords[i]
-//      if (element.length > longWord.length) {
-  
-//       longWord = element
-    
-//       longWord += `<mark style ="background-color:pink;">${element}</mark> `
-//     }
-//   }
-// }
+const longerSent = (sentence) => {
+  const sentenceSplit = sentence.split(" ");
+  let longestWord = ''
+  for (let i = 0; i < sentenceSplit.length; i++) {
+    if (sentenceSplit[i].length >= longestWord.length) {
+      longestWord = sentenceSplit[i]
+    }
+  }
+
+  return longestWord;
+};
 
 const checkButton = () => {
-  const checkBtn = document.querySelector('.charac') ;
+  const checkBtn = document.querySelector('.charac');
   const words = sentence.value;
   const splitWords = words.split(" ");
-  let wordsDisplay = '';
-  
+  let wordsD = '';
+  console.log(longerSent(words))
+  const longestWordOfThemAll = longerSent(words);
+
   for (let i = 0; i < splitWords.length; i++) {
-    const element = splitWords[i];
-    if (element.length >= 8) {
-      wordsDisplay += `<mark style ="background-color:pink ;">${element}</mark> `
+    const elem = splitWords[i];
+    if (longestWordOfThemAll.length == elem.length) { 
+      wordsD += `<mark style ="background-color:green ;">${elem}</mark> `
     }
-      if(!checkBtn.checked){
-        wordsDisplay += element + ' '
-      }
-    wordElem.innerHTML = wordsDisplay
-  
- }
+
+    if (!checkBtn.checked) {
+      wordsD += elem + ' '
+    }
+    wordElem.innerHTML = wordsD
+
+  }
 
 }
-element.addEventListener('click',checkButton)
-
-
-  
+element.addEventListener('click', checkButton)

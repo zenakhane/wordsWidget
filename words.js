@@ -1,13 +1,16 @@
-const wordsWidget = (word) => {
+// const wordsWidget = (splitWords) => {
+//     const splitWords = words.split(" ");
 
-    const lengthy = word.split(" ")
-// function for getting the longest word
-const widget = () => {
-let list = lengthy.map()
-}
-
-    return {
-        widget
-
-    }
-}
+// function wordies(){
+// const sentence = splitWords.map(function list(){
+// return {list,
+// length: list.length,
+// type: list.length > 4 ?  'longer': ""
+// }
+// });
+   
+// } 
+// return{
+//    wordies 
+// }
+// }
